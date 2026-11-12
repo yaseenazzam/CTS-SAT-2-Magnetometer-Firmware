@@ -1,0 +1,18 @@
+{
+  "stm32-for-vscode.armToolchainPath": "/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.macosaarch64_1.0.0.202602081740/tools/bin",
+  "cmake.cmakePath": "cube-cmake",
+  "cmake.configureArgs": [
+    "-DCMAKE_COMMAND=cube-cmake"
+  ],
+  "cmake.preferredGenerators": [
+    "Ninja"
+  ],
+  "stm32cube-ide-clangd.path": "cube",
+  "stm32cube-ide-clangd.arguments": [
+    "starm-clangd",
+    "--query-driver=${env:CUBE_BUNDLE_PATH}/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-gcc*",
+    "--query-driver=${env:CUBE_BUNDLE_PATH}/gnu-tools-for-stm32/14.3.1+st.2/bin/arm-none-eabi-g++*"
+  ],
+  "cortex-debug.openocdPath": "/opt/homebrew/bin/openocd",
+  "cortex-debug.armToolchainPath": "/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.macosaarch64_1.0.0.202602081740/tools/bin"
+}

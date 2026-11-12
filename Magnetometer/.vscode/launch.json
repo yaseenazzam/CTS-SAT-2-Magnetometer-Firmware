@@ -1,0 +1,48 @@
+{
+  "configurations": [
+    {
+      "type": "stlinkgdbtarget",
+      "request": "launch",
+      "name": "STM32Cube: Launch ST-Link GDB Server",
+      "origin": "snippet",
+      "cwd": "${workspaceFolder}",
+      "preBuild": "${command:st-stm32-ide-debug-launch.build}",
+      "runEntry": "main",
+      "imagesAndSymbols": [
+        {
+          "imageFileName": "${command:st-stm32-ide-debug-launch.get-projects-binary-from-context1}"
+        }
+      ]
+    },
+
+
+    {
+      "showDevDebugOutput": "parsed",
+      "cwd": "${workspaceRoot}",
+      "executable": "./build/debug/magnetometer.elf",
+      "name": "Debug STM32",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "preLaunchTask": "Build STM",
+      "device": "",
+      "configFiles": [
+        "openocd.cfg"
+      ]
+    },
+    {
+      "showDevDebugOutput": "parsed",
+      "cwd": "${workspaceRoot}",
+      "executable": "./build/debug/magnetometer.elf",
+      "name": "Attach STM32",
+      "request": "attach",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "preLaunchTask": "Build STM",
+      "device": "",
+      "configFiles": [
+        "openocd.cfg"
+      ]
+    }
+  ]
+}

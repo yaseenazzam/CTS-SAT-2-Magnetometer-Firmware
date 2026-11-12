@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "compileCommands": "${workspaceFolder}/build/Debug/compile_commands.json",
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ],
+            "intelliSenseMode": "macos-clang-x64",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "defines": [
+                "STM32L4R5xx",
+                "USE_HAL_DRIVER"
+            ],
+            "includePath": [
+                "Core/Inc",
+                "Drivers/CMSIS/Device/ST/STM32L4xx/Include",
+                "Drivers/CMSIS/Include",
+                "Drivers/STM32L4xx_HAL_Driver/Inc",
+                "Drivers/STM32L4xx_HAL_Driver/Inc/Legacy"
+            ],
+            "compilerPath": "/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.macosaarch64_1.0.0.202602081740/tools/bin/arm-none-eabi-gcc"
+        }
+    ],
+    "version": 4
+}
